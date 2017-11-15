@@ -8,16 +8,23 @@
 
 import UIKit
 
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
+        
+//        let stream = InputStream(fileAtPath: "LocalFiles/cityList.csv")!
+//        let csv = try! CSVReader(stream: stream)
+//        let csv = try CSV(name: Bundle.mainBundle.pathForResource("cityList", ofType: "csv"))
+        
+//        let url = URL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("cityList.csv")
+//        guard let stream = OutputStream(toFileAtPath: url.path, append: false) else { return }
+        
+        
+        DataManager.sharedInstance.initCityData()
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 

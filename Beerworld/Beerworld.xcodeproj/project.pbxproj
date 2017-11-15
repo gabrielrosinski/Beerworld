@@ -13,6 +13,9 @@
 		C02BF1F31FBC49A600650E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02BF1F11FBC49A600650E35 /* Main.storyboard */; };
 		C02BF1F51FBC49A600650E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02BF1F41FBC49A600650E35 /* Assets.xcassets */; };
 		C02BF1F81FBC49A600650E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02BF1F61FBC49A600650E35 /* LaunchScreen.storyboard */; };
+		C0C4CE5D1FBC61C00034E972 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C4CE5C1FBC61C00034E972 /* DataManager.swift */; };
+		C0C4CE5F1FBC62C10034E972 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C4CE5E1FBC62C10034E972 /* City.swift */; };
+		C0DC3C9A1FBC50150091FAB0 /* cityList.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0DC3C991FBC50150091FAB0 /* cityList.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +28,9 @@
 		C02BF1F41FBC49A600650E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C02BF1F71FBC49A600650E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C02BF1F91FBC49A600650E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0C4CE5C1FBC61C00034E972 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C0C4CE5E1FBC62C10034E972 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		C0DC3C991FBC50150091FAB0 /* cityList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cityList.csv; sourceTree = "<group>"; };
 		E6BE6C7F516FF1E4D8B2BD7B /* Pods_Beerworld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beerworld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -69,6 +75,9 @@
 		C02BF1EC1FBC49A600650E35 /* Beerworld */ = {
 			isa = PBXGroup;
 			children = (
+				C0C4CE5B1FBC61A80034E972 /* Managers */,
+				C0C4CE561FBC5C280034E972 /* Model */,
+				C0DC3C981FBC4FFA0091FAB0 /* LocalFiles */,
 				C02BF1ED1FBC49A600650E35 /* AppDelegate.swift */,
 				C02BF1EF1FBC49A600650E35 /* ViewController.swift */,
 				C02BF1F11FBC49A600650E35 /* Main.storyboard */,
@@ -77,6 +86,30 @@
 				C02BF1F91FBC49A600650E35 /* Info.plist */,
 			);
 			path = Beerworld;
+			sourceTree = "<group>";
+		};
+		C0C4CE561FBC5C280034E972 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C0C4CE5E1FBC62C10034E972 /* City.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C0C4CE5B1FBC61A80034E972 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				C0C4CE5C1FBC61C00034E972 /* DataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		C0DC3C981FBC4FFA0091FAB0 /* LocalFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C0DC3C991FBC50150091FAB0 /* cityList.csv */,
+			);
+			path = LocalFiles;
 			sourceTree = "<group>";
 		};
 		C3112E24C590C9B1BC520AFC /* Pods */ = {
@@ -153,6 +186,7 @@
 				C02BF1F81FBC49A600650E35 /* LaunchScreen.storyboard in Resources */,
 				C02BF1F51FBC49A600650E35 /* Assets.xcassets in Resources */,
 				C02BF1F31FBC49A600650E35 /* Main.storyboard in Resources */,
+				C0DC3C9A1FBC50150091FAB0 /* cityList.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C02BF1F01FBC49A600650E35 /* ViewController.swift in Sources */,
+				C0C4CE5D1FBC61C00034E972 /* DataManager.swift in Sources */,
+				C0C4CE5F1FBC62C10034E972 /* City.swift in Sources */,
 				C02BF1EE1FBC49A600650E35 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
