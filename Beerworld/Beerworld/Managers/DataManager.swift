@@ -16,6 +16,8 @@ class DataManager: NSObject {
     
     var citiesDict:[String:City] = [String:City]()
     
+    var citiesArray:[City] = [City]()
+    
     private override init() {
         super.init()
     }
@@ -23,6 +25,7 @@ class DataManager: NSObject {
     func initCityData(){
         
         var cityName:String
+        var city:City
 
         guard let stream = InputStream(fileAtPath: Bundle.main.path(forResource: "cityList", ofType: "csv")!)else { return }
         let csv = try! CSVReader(stream: stream)
@@ -30,7 +33,10 @@ class DataManager: NSObject {
             
             if row.count > 1 && row[0] != "city"{
                 cityName = row[0]
-                citiesDict[cityName] = City(cityName: cityName , lat: row[2], lng: row[3])
+//                citiesDict[cityName] = City(cityName: cityName , lat: row[2], lng: row[3])
+                
+                city = City(cityName: cityName , lat: row[2], lng: row[3])
+                citiesArray.append(city)
             }
         }
 

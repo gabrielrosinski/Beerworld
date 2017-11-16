@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		26A3D6B4BBD5232E0BB47BAA /* Pods_Beerworld.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6BE6C7F516FF1E4D8B2BD7B /* Pods_Beerworld.framework */; };
 		C02BF1EE1FBC49A600650E35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02BF1ED1FBC49A600650E35 /* AppDelegate.swift */; };
-		C02BF1F01FBC49A600650E35 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02BF1EF1FBC49A600650E35 /* ViewController.swift */; };
 		C02BF1F31FBC49A600650E35 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02BF1F11FBC49A600650E35 /* Main.storyboard */; };
 		C02BF1F51FBC49A600650E35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C02BF1F41FBC49A600650E35 /* Assets.xcassets */; };
 		C02BF1F81FBC49A600650E35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C02BF1F61FBC49A600650E35 /* LaunchScreen.storyboard */; };
 		C0C4CE5D1FBC61C00034E972 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C4CE5C1FBC61C00034E972 /* DataManager.swift */; };
 		C0C4CE5F1FBC62C10034E972 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C4CE5E1FBC62C10034E972 /* City.swift */; };
+		C0C4CE611FBC71070034E972 /* CitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C4CE601FBC71070034E972 /* CitiesViewController.swift */; };
+		C0C4CE631FBC75420034E972 /* CityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C4CE621FBC75420034E972 /* CityTableViewCell.swift */; };
 		C0DC3C9A1FBC50150091FAB0 /* cityList.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0DC3C991FBC50150091FAB0 /* cityList.csv */; };
 /* End PBXBuildFile section */
 
@@ -23,13 +24,14 @@
 		99E1AACDE2F71C0C607EB8A5 /* Pods-Beerworld.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Beerworld.release.xcconfig"; path = "Pods/Target Support Files/Pods-Beerworld/Pods-Beerworld.release.xcconfig"; sourceTree = "<group>"; };
 		C02BF1EA1FBC49A600650E35 /* Beerworld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Beerworld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C02BF1ED1FBC49A600650E35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C02BF1EF1FBC49A600650E35 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C02BF1F21FBC49A600650E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C02BF1F41FBC49A600650E35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C02BF1F71FBC49A600650E35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C02BF1F91FBC49A600650E35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C0C4CE5C1FBC61C00034E972 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C0C4CE5E1FBC62C10034E972 /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		C0C4CE601FBC71070034E972 /* CitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CitiesViewController.swift; sourceTree = "<group>"; };
+		C0C4CE621FBC75420034E972 /* CityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityTableViewCell.swift; sourceTree = "<group>"; };
 		C0DC3C991FBC50150091FAB0 /* cityList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cityList.csv; sourceTree = "<group>"; };
 		E6BE6C7F516FF1E4D8B2BD7B /* Pods_Beerworld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beerworld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -79,7 +81,8 @@
 				C0C4CE561FBC5C280034E972 /* Model */,
 				C0DC3C981FBC4FFA0091FAB0 /* LocalFiles */,
 				C02BF1ED1FBC49A600650E35 /* AppDelegate.swift */,
-				C02BF1EF1FBC49A600650E35 /* ViewController.swift */,
+				C0C4CE601FBC71070034E972 /* CitiesViewController.swift */,
+				C0C4CE621FBC75420034E972 /* CityTableViewCell.swift */,
 				C02BF1F11FBC49A600650E35 /* Main.storyboard */,
 				C02BF1F41FBC49A600650E35 /* Assets.xcassets */,
 				C02BF1F61FBC49A600650E35 /* LaunchScreen.storyboard */,
@@ -245,8 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C02BF1F01FBC49A600650E35 /* ViewController.swift in Sources */,
 				C0C4CE5D1FBC61C00034E972 /* DataManager.swift in Sources */,
+				C0C4CE611FBC71070034E972 /* CitiesViewController.swift in Sources */,
+				C0C4CE631FBC75420034E972 /* CityTableViewCell.swift in Sources */,
 				C0C4CE5F1FBC62C10034E972 /* City.swift in Sources */,
 				C02BF1EE1FBC49A600650E35 /* AppDelegate.swift in Sources */,
 			);
