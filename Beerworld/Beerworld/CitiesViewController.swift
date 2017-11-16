@@ -26,21 +26,13 @@ class CitiesViewController: UIViewController,UITableViewDelegate,UITableViewData
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        let count = DataManager.sharedInstance.citiesDict.count
-//        return count > 0 ? count : 0
-        
+
         if isSearching {
             return filteredData.count
         }
-        
         
         let count = DataManager.sharedInstance.citiesArray.count
         return count > 0 ? count : 0
@@ -64,7 +56,11 @@ class CitiesViewController: UIViewController,UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
+        let breweryMapViewController: BreweryMapViewController = storyboard?.instantiateViewController(withIdentifier: "BreweryMapViewController") as! BreweryMapViewController
         
+//        productInfoVC.product = productsToBuyArray[indexPath.row]
+        
+        self.navigationController?.pushViewController(breweryMapViewController, animated: true)
     }
     
     
@@ -78,6 +74,7 @@ class CitiesViewController: UIViewController,UITableViewDelegate,UITableViewData
             tableView.reloadData()
             
         }else{
+            
             isSearching = true
 
             filteredData = DataManager.sharedInstance.citiesArray.filter({$0.cityName == searchBar.text})
