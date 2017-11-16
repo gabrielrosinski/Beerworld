@@ -8,16 +8,23 @@
 
 import UIKit
 
-class CitiesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class CitiesViewController: UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate {
 
     
     @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var isSearching = false
+    
+    var filteredData = [City]()
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.done
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,6 +37,11 @@ class CitiesViewController: UIViewController,UITableViewDelegate,UITableViewData
 //        let count = DataManager.sharedInstance.citiesDict.count
 //        return count > 0 ? count : 0
         
+        if isSearching {
+            return filteredData.count
+        }
+        
+        
         let count = DataManager.sharedInstance.citiesArray.count
         return count > 0 ? count : 0
     }
@@ -40,8 +52,12 @@ class CitiesViewController: UIViewController,UITableViewDelegate,UITableViewData
         
         cell.backgroundColor = .random
         
-        cell.cityName.text = DataManager.sharedInstance.citiesArray[indexPath.row].cityName
-        
+        if isSearching {
+            cell.cityName.text = filteredData[indexPath.row].cityName
+        }else{
+            cell.cityName.text = DataManager.sharedInstance.citiesArray[indexPath.row].cityName
+        }
+
         return cell
     }
     
@@ -49,6 +65,26 @@ class CitiesViewController: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         
+    }
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            
+            isSearching = false
+            
+            view.endEditing(true)
+            
+            tableView.reloadData()
+            
+        }else{
+            isSearching = true
+
+            filteredData = DataManager.sharedInstance.citiesArray.filter({$0.cityName == searchBar.text})
+            
+            tableView.reloadData()
+            
+        }
     }
 
 }
