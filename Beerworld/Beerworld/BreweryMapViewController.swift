@@ -10,26 +10,39 @@ import UIKit
 
 class BreweryMapViewController: UIViewController {
 
+    var city:City?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
+        //zoom on the cities location
+        
+        
+        if let existingCity = city {
+            DataManager.sharedInstance.fetchBreweries(lat: existingCity.lat, lng: existingCity.lng) { (result) in
+                
+                
+                print("")
+                
+                
+                //create annotations from brewery objects
+                //add them to the map
+                //realod the map with the annotations
+                
+            }
+            
+        }else{
+            print("city doesnt exist")
+        }
+        
+
+        
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    
 
 }

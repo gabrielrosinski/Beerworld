@@ -57,9 +57,13 @@ class CitiesViewController: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let breweryMapViewController: BreweryMapViewController = storyboard?.instantiateViewController(withIdentifier: "BreweryMapViewController") as! BreweryMapViewController
-        
-//        productInfoVC.product = productsToBuyArray[indexPath.row]
-        
+
+        if isSearching {
+            breweryMapViewController.city = filteredData[0]
+        }else{
+            breweryMapViewController.city = DataManager.sharedInstance.citiesArray[indexPath.row]
+        }
+  
         self.navigationController?.pushViewController(breweryMapViewController, animated: true)
     }
     
