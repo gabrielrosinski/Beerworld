@@ -61,7 +61,7 @@ class BreweryMapViewController: UIViewController {
                         latitude = (brewery.latitude as NSString).doubleValue
                         longitude = (brewery.longitude as NSString).doubleValue
                         subtitle = brewery.streetAddress
-                        if brewery.phone != nil {
+                        if brewery.phone != "null" {
                             subtitle = subtitle + "\n" + brewery.phone
                         }
                         
@@ -77,14 +77,18 @@ class BreweryMapViewController: UIViewController {
                     self.mapView.reloadInputViews()
                     
                 }
-                
-                
-
-                
             }
             
         }else{
             print("city doesnt exist")
+            
+            let alert = UIAlertController(title: "Technical issue", message: "This city does not exists", preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.default, handler: { (action) in
+                alert.dismiss(animated: true, completion: nil)
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
         }
         
 
