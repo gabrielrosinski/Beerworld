@@ -19,6 +19,7 @@
 		C0C4CE911FBDEEA10034E972 /* BreweryMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C4CE901FBDEEA10034E972 /* BreweryMapViewController.swift */; };
 		C0C4CE931FBDEEB50034E972 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C4CE921FBDEEB50034E972 /* NetworkManager.swift */; };
 		C0C4CE951FBDEF4A0034E972 /* Brewery.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C4CE941FBDEF4A0034E972 /* Brewery.swift */; };
+		C0C4CE971FC04C2E0034E972 /* BreweryAnnotion.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C4CE961FC04C2E0034E972 /* BreweryAnnotion.swift */; };
 		C0DC3C9A1FBC50150091FAB0 /* cityList.csv in Resources */ = {isa = PBXBuildFile; fileRef = C0DC3C991FBC50150091FAB0 /* cityList.csv */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +39,7 @@
 		C0C4CE901FBDEEA10034E972 /* BreweryMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryMapViewController.swift; sourceTree = "<group>"; };
 		C0C4CE921FBDEEB50034E972 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C0C4CE941FBDEF4A0034E972 /* Brewery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brewery.swift; sourceTree = "<group>"; };
+		C0C4CE961FC04C2E0034E972 /* BreweryAnnotion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryAnnotion.swift; sourceTree = "<group>"; };
 		C0DC3C991FBC50150091FAB0 /* cityList.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cityList.csv; sourceTree = "<group>"; };
 		E6BE6C7F516FF1E4D8B2BD7B /* Pods_Beerworld.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Beerworld.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -89,6 +91,7 @@
 				C02BF1ED1FBC49A600650E35 /* AppDelegate.swift */,
 				C0C4CE601FBC71070034E972 /* CitiesViewController.swift */,
 				C0C4CE901FBDEEA10034E972 /* BreweryMapViewController.swift */,
+				C0C4CE961FC04C2E0034E972 /* BreweryAnnotion.swift */,
 				C0C4CE621FBC75420034E972 /* CityTableViewCell.swift */,
 				C02BF1F11FBC49A600650E35 /* Main.storyboard */,
 				C02BF1F41FBC49A600650E35 /* Assets.xcassets */,
@@ -259,6 +262,7 @@
 			files = (
 				C0C4CE951FBDEF4A0034E972 /* Brewery.swift in Sources */,
 				C0C4CE5D1FBC61C00034E972 /* DataManager.swift in Sources */,
+				C0C4CE971FC04C2E0034E972 /* BreweryAnnotion.swift in Sources */,
 				C0C4CE611FBC71070034E972 /* CitiesViewController.swift in Sources */,
 				C0C4CE911FBDEEA10034E972 /* BreweryMapViewController.swift in Sources */,
 				C0C4CE931FBDEEB50034E972 /* NetworkManager.swift in Sources */,

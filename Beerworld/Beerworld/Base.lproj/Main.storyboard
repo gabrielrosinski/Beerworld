@@ -98,6 +98,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1Qz-lE-RyL">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <outlet property="delegate" destination="4OI-Wb-gw5" id="lrh-me-Zrz"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -109,6 +112,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cK5-u7-SNF"/>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="1Qz-lE-RyL" id="JQT-D2-upZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEO-dE-eCd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

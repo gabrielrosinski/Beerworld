@@ -65,6 +65,8 @@ class CitiesViewController: UIViewController,UITableViewDelegate,UITableViewData
         }
   
         self.navigationController?.pushViewController(breweryMapViewController, animated: true)
+        
+        self.tableView.deselectRow(at: indexPath, animated: true)
     }
     
     

@@ -85,9 +85,7 @@ class DataManager: NSObject {
                 breweriesArray.append(breweryItem)
                 
             }
-            
-            
-            print("")
+
             callback(breweriesArray)
             
         }
