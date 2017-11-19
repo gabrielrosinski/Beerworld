@@ -30,29 +30,52 @@ class DataManager: NSObject {
         var cityName:String
         var city:City
 
-        guard let stream = InputStream(fileAtPath: Bundle.main.path(forResource: "cityList", ofType: "csv")!)else { return }
-        let csv = try! CSVReader(stream: stream)
-        while let row = csv.next() {
+        
+        
+        if citiesExist(){
             
-            if row.count > 1 && row[0] != "city"{
-                cityName = row[0]
-                city = City(cityName: cityName , lat: row[2], lng: row[3])
-                citiesArray.append(city)
+            loadCitiesData()
+            
+        }else{
+            guard let stream = InputStream(fileAtPath: Bundle.main.path(forResource: "cityList", ofType: "csv")!)else { return }
+            let csv = try! CSVReader(stream: stream)
+            while let row = csv.next() {
+                
+                if row.count > 1 && row[0] != "city"{
+                    cityName = row[0]
+                    city = City(cityName: cityName , lat: row[2], lng: row[3])
+                    citiesArray.append(city)
+                }
             }
+            
+            let data = NSKeyedArchiver.archivedData(withRootObject: citiesArray)
+            UserDefaults.standard.set(data, forKey: "citiesArray")
+            
+//            let cityExistsBool = NSKeyedArchiver.archivedData(withRootObject: true)
+//            UserDefaults.standard.set(cityExistsBool, forKey: "citiesExist")
+            UserDefaults.standard.setValue(true, forKey: "citiesExist")
         }
 
-        let data = NSKeyedArchiver.archivedData(withRootObject: citiesDict)
-        UserDefaults.standard.set(data, forKey: "citiesDict")
-  
     }
     
     
-    func loadCitiesData()
+    func citiesExist() -> Bool
     {
-        if let data = UserDefaults.standard.object(forKey: "citiesDict") as? NSData {
-            citiesDict = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [String : City]
+        if let exist = UserDefaults.standard.object(forKey: "citiesExist") as? Bool {
+            return true
+        }else{
+            return false
+        }
+    }
+    
+    func loadCitiesData() -> Bool
+    {
+        if let data = UserDefaults.standard.object(forKey: "citiesArray") as? NSData {
+            self.citiesArray = NSKeyedUnarchiver.unarchiveObject(with: data as Data) as! [City]
+            return true
         }else{
             print("loading cities data was corrupted")
+            return false
         }
     }
 
