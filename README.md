@@ -9,3 +9,7 @@ esspecially when its a hardcoded list of cities. so instaed ive turned it into a
 known issues:
 Not all the optinal variables have been addressed. if it was production level app this would be resolved.
 unfortently i been multitasking between a few home assignments such as this. lack of time.
+
+
+Testing:
+Most cities does not have brewries. when you search for a city that have brewries try prague. its in the list.
