@@ -12,4 +12,5 @@ unfortently i been multitasking between a few home assignments such as this. lac
 
 
 Testing:
-Most cities does not have brewries. when you search for a city that have brewries try prague. its in the list.
+ - Most cities does not have brewries. when you search for a city that have brewries try prague. its in the list.
+ - By pressing on the brewery pin in the map the subtext will appear with a brewery street and brewry phone number if it exists.
